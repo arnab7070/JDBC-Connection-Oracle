@@ -30,8 +30,11 @@ public class Main {
                     ResultSet rs = st.executeQuery("SELECT * FROM TOUR");
                     if (rs != null) {
                         while (rs.next()) {
-                            System.out.println(rs.getString(1) + "\t\t" + rs.getString(2) + "\t\t" + rs.getInt(3)
-                                    + "\t\t" + rs.getString(4));
+                            System.out.println("Details for " + rs.getString(2));
+                            System.out.println("TourID: "+rs.getString(1));
+                            System.out.println("Price: "+rs.getInt(3));
+                            System.out.println("Tour Type: "+rs.getString(4));
+                            System.out.println("------------------------------------------------------");
                         }
                     }
                 }
